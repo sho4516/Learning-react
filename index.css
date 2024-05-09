@@ -1,0 +1,126 @@
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  z-index: 9999;
+}
+
+.logo-container {
+  /* position: relative; */
+  height: 80%;
+  width: max-content;
+  margin-left: 1rem;
+}
+
+.logo {
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-right: 2rem;
+  color: black;
+  font-size: 1rem;
+}
+
+.nav-items ul li {
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: border-bottom 0.3s ease-out;
+}
+
+.nav-items ul li:hover {
+  border-bottom: 1px solid white;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.body {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.res-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.res-card {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  /* background-color: #f0f0f0; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.res-card:hover {
+  transform: scale(0.95);
+}
+
+.res-card .img-container {
+  width: 95%;
+  height: 60%;
+  border-radius: 15px;
+}
+
+.res-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.res-info-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.res-info-container h3 {
+  color: #42444a;
+}
+
+.res-info-container h4 {
+  color: #42444a;
+  font-weight: lighter;
+}
+
+.res-info-container > h4:nth-child(2) {
+  margin-bottom: 0.5rem;
+  word-wrap: none;
+}
