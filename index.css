@@ -125,3 +125,22 @@ body {
   margin-bottom: 0.5rem;
   word-wrap: none;
 }
+
+.filter{
+    margin-bottom: 1rem;
+    margin-left: 9rem;
+}
+
+.filter .filter-btn{
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.filter-btn:hover{
+    transform: scale(1.1);
+}
