@@ -1,11 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
   //State Variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [filteredList, setFilteredList] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -21,11 +22,39 @@ const Body = () => {
     setListOfRestaurants(
       json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+
+    setFilteredList(
+      json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
-  return listOfRestaurants.length == 0 ? <Shimmer /> : (
+  return listOfRestaurants.length == 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Type to search"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          ></input>
+          <button
+            type="button"
+            onClick={() => {
+              const flilterBySearch = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+
+              setFilteredList(flilterBySearch);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           type="button"
           className="filter-btn"
@@ -40,7 +69,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => {
+        {filteredList.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.info.id} resData={restaurant} />
           );

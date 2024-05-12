@@ -179,18 +179,51 @@ body {
 }
 
 .filter {
-  margin-bottom: 1rem;
-  margin-left: 9rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.search {
+  margin-right: 3rem;
+}
+
+.search input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid black;
+  outline: none;
+}
+
+.search button {
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(58, 58, 182);
+  color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.search > button:hover {
+    transform: scale(1.1);
+  }
 
 .filter .filter-btn {
   padding: 0.5rem;
   cursor: pointer;
   border: none;
   border-radius: 15px;
-  background-color: white;
+  background-color: rgb(58, 58, 182);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
 
 .filter-btn:hover {
