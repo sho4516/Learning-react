@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  //State Variable
+  // State Variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredList, setFilteredList] = useState([]);
@@ -14,7 +14,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const result = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "http://localhost:3000/api?lat=30.3164945&lng=78.03219179999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await result.json();
@@ -62,7 +62,7 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating >= 4.0
             );
-            setListOfRestaurants(filteredList);
+            setFilteredList(filteredList);
           }}
         >
           Top Rated Restaurants

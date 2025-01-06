@@ -14,3 +14,9 @@ const AppLayout = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
+
+/*
+const heading = React.createElement("h1", { id: "heading" }, "Hello World");
+const r = ReactDOM.createRoot(document.getElementById("root"));
+r.render(heading);
+*/

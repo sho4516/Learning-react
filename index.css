@@ -48,11 +48,12 @@ h4 {
 .nav-items ul li {
   margin-right: 1rem;
   cursor: pointer;
-  transition: border-bottom 0.3s ease-out;
+  transition: border-bottom 0.3s ease-in-out;
 }
 
 .nav-items ul li:hover {
   border-bottom: 1px solid black;
+  transition: border-bottom 0.3s ease-in-out;
 }
 
 body {
@@ -196,7 +197,7 @@ body {
   border-radius: 5px;
   padding: 0.5rem;
   margin-right: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid gray;
   outline: none;
 }
 
@@ -212,8 +213,8 @@ body {
 }
 
 .search > button:hover {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
+}
 
 .filter .filter-btn {
   padding: 0.5rem;
