@@ -61,6 +61,7 @@ body {
 }
 
 .body,
+.res-menu-body,
 .shimmer-body {
   margin-top: 5rem;
   position: relative;
@@ -229,4 +230,248 @@ body {
 
 .filter-btn:hover {
   transform: scale(1.1);
+}
+
+.res-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.res-menu-body .res-name-heading {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.res-menu-body .res-name-heading h2 {
+  font-family: Helvetica;
+}
+
+.res-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+  justify-content: start;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 14px 11px rgba(237, 232, 237, 1);
+}
+
+.res-ratings-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.res-ratings-details > span {
+  margin-right: 0.5rem;
+  color: green;
+}
+
+.res-ratings-details .res-ratings,
+.res-ratings-details .res-estimate {
+  font-family: Gilroy_Bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+}
+
+.res-ratings {
+  margin-right: 0.5rem;
+}
+
+.res-estimate {
+  margin-right: 0.5rem;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgb(60, 59, 59);
+}
+
+.res-address-details {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: start;
+}
+
+.side-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.big-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(183, 181, 181);
+}
+
+.connecting-line {
+  width: 1px;
+  height: 25px;
+  background: rgb(183, 181, 181);
+}
+
+.res-address-details-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.res-menu-list {
+  position: relative;
+  margin-top: 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordian {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordian-divider {
+  position: relative;
+  height: 1rem;
+  background-color: #c8c3c3;
+  border-radius: 15px;
+}
+
+.accordian-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordian-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1rem;
+}
+
+.open {
+  display: block;
+}
+
+.closed {
+  display: none;
+}
+
+.accordian-content:last-child {
+  border-bottom: none;
+}
+
+.accordian-content-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 100%;
+}
+
+.accordian-content-text {
+  position: relative;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.dish-name {
+  margin-bottom: 0.2rem;
+}
+
+.dish-name span {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.price-offer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.6rem;
+}
+
+.price-offer h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.offers {
+  font-family: ProximaNovaCond_Extrabold;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.6);
+}
+
+.rating-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  margin-bottom: 0.6rem;
+}
+
+.accordian-content-image-holder {
+  position: relative;
+  width: 20%;
+  height: 140px;
+  border-radius: 15px;
+}
+
+.accordian-content-image-holder img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.link-no-style {
+  text-decoration: none; /* Removes the underline */
+  color: inherit;        /* Inherits the text color from the parent */
 }
